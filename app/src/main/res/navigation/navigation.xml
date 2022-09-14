@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/beritaFragment">
+
+    <fragment
+        android:id="@+id/beritaFragment"
+        android:name="com.malikazizali.daftarberita.BeritaFragment"
+        android:label="fragment_berita"
+        tools:layout="@layout/fragment_berita" >
+        <action
+            android:id="@+id/action_beritaFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.malikazizali.daftarberita.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="stringData"
+            app:argType="string" />
+    </fragment>
+</navigation>
